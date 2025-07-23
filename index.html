@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Portifolio Rafael Cayres</title>
+  </head>
+  <body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+      <ul class="menu">
+        <li>
+          <a href="#inicio" class="menu-link">Inicio</a>
+        </li>
+        <li>
+          <a href="#sobre" class="menu-link">Sobre</a>
+        </li>
+        <li>
+          <a href="#projetos" class="menu-link">Projetos</a>
+        </li>
+        <li>
+          <a href="#contatos" class="menu-link">Contatos</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+      <img
+        src="img/profile-pic.jpg"
+        alt="foto-de-rafael-cayres"
+        class="foto-perfil"
+      />
+      <h1>Rafael Cayres</h1>
+      <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Sou Rafael Cayres, desenvolvedor Full Stack de 36 anos, com forte
+          atuação no desenvolvimento de aplicações web modernas, escaláveis e
+          focadas na experiência do usuário. Tenho um perfil profissional
+          versátil, que une pensamento analítico, senso estético e foco em
+          resultados. Sou movido por desafios, aprendizado contínuo e pela busca
+          constante por soluções eficientes e bem estruturadas. Como Full Stack
+          Developer, possuo domínio das tecnologias essenciais do
+          desenvolvimento web: HTML, CSS, JavaScript, além de frameworks
+          modernos como Next.js e o ecossistema React/Next, que utilizo para
+          construir aplicações dinâmicas e otimizadas. No backend, sou familiar
+          com as principais tecnologias utilizadas em APIs REST e arquitetura
+          server-side, incluindo Node.js e bancos de dados relacionais e
+          não-relacionais. Tenho conhecimento avançado no uso de Inteligência
+          Artificial, aplicando modelos de linguagem, APIs e ferramentas
+          generativas para automação, análise de dados e integração com sistemas
+          web. Tenho um olhar atento tanto para o código limpo e funcional
+          quanto para a usabilidade e performance das aplicações. Trabalho bem
+          em equipe, comunico-me com clareza e sou comprometido com prazos e
+          qualidade técnica. Além disso, valorizo boas práticas de versionamento
+          com Git, padrões de projeto e testes automatizados. Minha
+          personalidade é marcada pelo equilíbrio entre organização,
+          proatividade e criatividade. Sou autodidata, curioso por natureza, e
+          busco constantemente evoluir como profissional, acompanhando as
+          tendências do mercado e me atualizando com novas ferramentas e
+          metodologias ágeis.
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+        <div class="projetos-card">
+          <a href="https://coffeeonkeyboard.netlify.app/" target="_blank">
+            <img
+              src="img/coffee.jpg"
+              alt="coffee-image"
+              class="projetos-imagem"
+          /></a>
+          <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Coffee Shop</h3>
+            <p class="paragrafo-projetos">
+              O Coding Coffee é um café temático voltado para desenvolvedores e
+              criativos, com grãos arábica premium de alta altitude que oferecem
+              sabor encorpado, aroma intenso e energia duradoura — ideal para
+              longas sessões de programação.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <a href="https://infotravels.netlify.app/" target="_blank">
+            <img
+              src="img/travel.jpg"
+              alt="travel-image"
+              class="projetos-imagem"
+          /></a>
+          <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Info Travels</h3>
+            <p class="paragrafo-projetos">
+              InfoTravels é um site moderno e responsivo voltado ao público
+              apaixonado por viagens. Com um design limpo e visual atrativo, a
+              plataforma oferece informações sobre destinos turísticos ao redor
+              do mundo, pacotes personalizados e depoimentos de viajantes.
+            </p>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <a href="https://devsoda.netlify.app/" target="_blank">
+            <img src="img/soda.jpg" alt="soda-image" class="projetos-imagem"
+          /></a>
+          <div class="caixa-textos-projeto">
+            <h3 class="info-projetos">Dev Soda</h3>
+            <p class="paragrafo-projetos">
+              Uma nova marca de refrigerante criada para programadores, gamers
+              ou qualquer pessoa que busca alem de um refresco, adicionar
+              energia e foco no dia a dia. Dev soda contem um nivel elevado de
+              cafeina e vitamina B12 que ajuda a te manter acordado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+      <h2 class="contatos-titulo">Entre em Contato</h2>
+      <form
+        class="formulario-contato"
+        id="formulario"
+        onsubmit="enviarWhatsApp(event)"
+      >
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            class="campo-form"
+            placeholder="Digite sua mensagem"
+            rows="5"
+            id="mensagem"
+          ></textarea>
+        </div>
+        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+      </form>
+    </section>
+  </body>
+  <script src="scripts.js"></script>
+</html>
