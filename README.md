@@ -1,6 +1,6 @@
 # 🚀 Cayres Portfolio
 
-![Homepage Screenshot](./screenshot.png)
+![Homepage Screenshot](https://github.com/cayresbr/Portifolio/blob/main/img/screenshot-home.jpg?raw=true)
 
 Portfólio pessoal desenvolvido por [Rafael Cayres](https://www.linkedin.com/in/cayress/) para apresentar projetos, habilidades e trajetória como desenvolvedor full-stack.
 
