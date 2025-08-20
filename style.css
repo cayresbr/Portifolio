@@ -31,25 +31,16 @@ body {
   width: 100%;
   background-color: var(--translucido);
   z-index: 100;
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* .navegacao {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: var(--translucido);
-  z-index: 100;
-  padding: 1.5rem;
-} */
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primaria);
-  letter-spacing: 1px;
+.img-logo {
+  max-width: 120px; /* tamanho máximo no desktop */
+  height: auto; /* mantém a proporção */
+  display: block;
 }
 
 .menu {
@@ -58,12 +49,6 @@ body {
   gap: 2rem;
   transition: all 0.3s ease;
 }
-/* .menu {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 3rem;
-} */
 
 .menu-link {
   text-decoration: none;
@@ -95,28 +80,6 @@ body {
   color: var(--claro);
   cursor: pointer;
 }
-/* .menu-link {
-  text-decoration: none;
-  color: var(--claro);
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.menu-link::after {
-  content: "";
-  height: 2px;
-  width: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-  transition: width 0.5s ease;
-}
-
-.menu-link:hover::after {
-  width: 100%;
-} */
 
 .cabecalho {
   min-height: 100vh;
@@ -127,7 +90,7 @@ body {
 }
 
 .foto-perfil {
-  width: 100%;
+  width: 295px;
   max-width: 450px; /* tamanho máximo no desktop */
   height: auto; /* mantém proporção */
   box-shadow: 0 0 20px var(--secundaria);
@@ -135,7 +98,6 @@ body {
   border: 4px solid var(--vidro);
   animation: foto-animation 4s ease-in-out infinite;
 }
-
 
 h1 {
   font-size: 3.5rem;
@@ -175,9 +137,6 @@ h1 {
   text-align: justify;
   font-size: 1.2rem;
   font-weight: 100;
-}
-
-.projetos {
 }
 
 .projetos-caixa {
@@ -294,21 +253,18 @@ h1 {
   height: 100%;
   z-index: -1;
   opacity: 0.5;
-  background:
-      radial-gradient(
+  background: radial-gradient(
       circle at 10% 20%,
       var(--primaria) 0%,
       transparent 30%
-      ),
-      radial-gradient(
-      circle at 90% 80%,
-      var(--secundaria) 0%,
-      transparent 20%),
-      var(--escuro);
+    ),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    var(--escuro);
 }
 
 @keyframes foto-animation {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY();
   }
   50% {
@@ -359,10 +315,13 @@ h1 {
   .menu-toggle {
     display: block;
   }
-}
+
+  .img-logo {
+    max-width: 90px;
+  }
 
   .navegacao {
-    padding: 1rem;
+    padding: .4rem;
   }
 
   .foto-perfil {
@@ -386,41 +345,3 @@ h1 {
   }
 }
 
-/* Telas menores que 480px (smartphones) */
-@media (max-width: 480px) {
-  .menu {
-    flex-direction: row;
-    gap: 2rem;
-
-  }
-
-  .foto-perfil {
-    max-width: 150px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .cabecalho-sub-titulo {
-    font-size: 1rem;
-  }
-
-  .sobre,
-  .contatos {
-    padding: 3rem 1rem;
-  }
-
-  .formulario-contato {
-    padding: 1rem;
-  }
-
-  .campo-form {
-    padding: 0.8rem;
-  }
-
-  .botao-form {
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-}
