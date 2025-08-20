@@ -31,17 +31,71 @@ body {
   width: 100%;
   background-color: var(--translucido);
   z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .navegacao {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--translucido);
+  z-index: 100;
   padding: 1.5rem;
+} */
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primaria);
+  letter-spacing: 1px;
 }
 
 .menu {
   display: flex;
+  list-style: none;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+/* .menu {
+  display: flex;
   justify-content: center;
   list-style: none;
   gap: 3rem;
-}
+} */
 
 .menu-link {
+  text-decoration: none;
+  color: var(--claro);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/* Ícone menu hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--claro);
+  cursor: pointer;
+}
+/* .menu-link {
   text-decoration: none;
   color: var(--claro);
   font-weight: 500;
@@ -62,7 +116,7 @@ body {
 
 .menu-link:hover::after {
   width: 100%;
-}
+} */
 
 .cabecalho {
   min-height: 100vh;
@@ -257,5 +311,122 @@ h1 {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+/* ========================= */
+/*  RESPONSIVIDADE           */
+/* ========================= */
+
+/* Telas menores que 1024px (tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .foto-perfil {
+    width: 250px;
+    height: 250px;
+  }
+
+  .sobre-titulo,
+  .projetos-titulo,
+  .contatos-titulo {
+    font-size: 2rem;
+  }
+}
+
+/* Telas menores que 768px (tablets em modo retrato e celulares grandes) */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: var(--translucido);
+    width: 200px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+  /* .menu {
+    flex-direction: row;
+    gap: 2rem;
+    text-align: center;
+  } */
+
+  .navegacao {
+    padding: 1rem;
+  }
+
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1.2rem;
+  }
+
+  .sobre-paragrafo {
+    font-size: 1rem;
+  }
+
+  .projetos-caixa {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: row;
+    gap: 2rem;
+
+  }
+
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .cabecalho-sub-titulo {
+    font-size: 1rem;
+  }
+
+  .sobre,
+  .contatos {
+    padding: 3rem 1rem;
+  }
+
+  .formulario-contato {
+    padding: 1rem;
+  }
+
+  .campo-form {
+    padding: 0.8rem;
+  }
+
+  .botao-form {
+    padding: 0.8rem;
+    font-size: 0.9rem;
   }
 }

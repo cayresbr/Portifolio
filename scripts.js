@@ -1,3 +1,22 @@
+// Menu responsivo (hambúrguer)
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+const menuLinks = document.querySelectorAll(".menu-link");
+
+// abre/fecha ao clicar no ícone
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+// fecha ao clicar em qualquer link
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+});
+
+
+
 function enviarWhatsApp(event) {
 
   event.preventDefault(); // Impede o envio do formulário padrão
@@ -13,3 +32,4 @@ function enviarWhatsApp(event) {
   window.open(url, '_blank');
 
 }
+
